@@ -15,7 +15,7 @@ return (
         <video src={wine} autoPlay loop muted />
         <div className='content'>
             <div className='textContent'>
-              <h1 className='homepageName'>ReciPlease</h1>
+              <h1 className='homepageName'>Wine Time</h1>
               <h3 className='homepageTitle'>Natural Wines</h3>
             </div> 
         </div>
