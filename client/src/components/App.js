@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import "./App.css";
+import "./Styles.css";
 import Home from "./Home.js";
 import ProductGrid from "./ProductGrid";
 import Login from "./Login";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductCard.css";
+import "./Styles.css";
 // import ProductDetails from "./ProductDetails";
 import { useNavigate } from "react-router-dom";
 

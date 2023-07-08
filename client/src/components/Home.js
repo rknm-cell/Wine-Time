@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css';
+import "./Styles.css";
 import wine from '../wine.mp4'
 import { useNavigate } from 'react-router-dom';
 

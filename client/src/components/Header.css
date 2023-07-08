@@ -1,39 +1,3 @@
-/* .nav-bar a {
-  overflow: hidden;
-  float: left;
-  display: block;
-  color: #940079;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  
-  font-size: 30px;
-  font-family: sans-serif
-  }
-  
-  .nav-bar {
-    list-style: none;
-    background-color: #ffcbce;
-    
-  }
-  
-  .nav-bar li {
-    display: inline-block;
-    padding: 0px 20px;
-  }
-
-  .nav-bar button {
-    padding: 0px 20px;
-  }
-  
-  .nav-bar li a:hover {
-    color: #FD95C9
-  }
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  } */
 
 .hamburgerMenuDiv {
     position: fixed;

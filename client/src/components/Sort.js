@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Sort.css";
+import "./Styles.css";
 
 function Sort({ setSortValue }) {
   return (

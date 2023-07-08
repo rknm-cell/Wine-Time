@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductDetails.css";
+import "./Styles.css";
 import { useLocation } from "react-router-dom";
 
 function ProductDetails({session, handleCartItems}) {

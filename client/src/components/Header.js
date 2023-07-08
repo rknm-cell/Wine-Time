@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
-import './Header.css';
+import "./Styles.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons";
 

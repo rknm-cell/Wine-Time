@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import "./ProductGrid.css";
+import "./Styles.css";
 import ProductCard from "./ProductCard";
 import Search from "./Search";
 import Sort from "./Sort";
