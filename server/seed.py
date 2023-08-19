@@ -10,25 +10,7 @@ from random import randint, choice as rc
 from app import app
 from models import db, Product, User, Cart_Item, Shopping_Session
 
-# fake = Faker()
 
-# def make_users():
-#     emails = []
-    
-#     for _ in range(30):
-#         email = fake.free_email()
-#         while email in emails:
-#             email = fake.email()
-#         emails.append(email)
-#         user = User(
-#             email=email,
-#             password = fake.password(length=8),
-#             admin = False
-#         )
-#         emails.append(user)
-#     db.session.add_all(emails)
-#     db.session.commit()
-    
 with app.app_context():
     print("Starting seed...")
     print("Seeding products...")
@@ -75,5 +57,4 @@ with app.app_context():
     db.session.commit()
 
     print("Seeding users...")
-    # make_users()
-    # Seed code goes here!
+

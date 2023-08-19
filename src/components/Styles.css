@@ -68,6 +68,10 @@
     padding: 2px;
   }
 }
+.product-grid-header{
+  flex-direction: row;
+  
+}
 .sortbar {
   padding-bottom: 5%;
   padding-left: 5%;
@@ -458,7 +462,7 @@ input {
 
 .navButton {
   align-items: center;
-  text-align: center;
+  text-align: left;
   padding: 2%;
   width: 25vw;
 }

@@ -2,7 +2,7 @@
   "name": "wine-time",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5555/",
+  "proxy": "http://127.0.0.1:5555/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -14,6 +14,7 @@
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
     "babel-preset-react-app": "^10.0.1",
+    "bcrypt": "^5.1.0",
     "bfj": "^7.0.2",
     "browserslist": "^4.18.1",
     "camelcase": "^6.2.1",

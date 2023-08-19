@@ -8,7 +8,6 @@ import ProductDetails from "./ProductDetails";
 import Cart from "./Cart";
 import Header from "./Header";
 import SignUp from "./Signup";
-import Sort from "./Sort";
 import Checkout from "./Checkout";
 
 function App() {
@@ -17,18 +16,10 @@ function App() {
   const [session, setSession] = useState(null)
   const [wines, setWines] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  const [wineSort, setWineSort] = useState();
+
   const [sortType, setSortType] = useState("default");
   const navigate = useNavigate();
 
-  // const [cartItems, setCartItems] = useState([])
-  // const [deleteItems, setDeleteItems] = useState([])
-
-  useEffect(() => {
-    fetch("/products") // localhost works here too!
-      .then((r) => r.json())
-      .then(setWines);
-  }, []);
 
   useEffect(() => {
     fetch("/check_session").then((response) => {
@@ -51,19 +42,6 @@ function App() {
   function handleLogout() {
     setUser(null);
   }
-  // const sortedWines= useMemo(() => {
-  //   let result = wines
-
-  //   if (sortType === "descending") {
-  //     result = [...wines].sort((a, b) => {
-  //       return b.name.localeCompare(a.name);
-  //     });
-  //   } else if (sortType === "ascending") {
-  //     result = [...wines].sort((a, b) => {
-  //       return a.name.localeCompare(b.name);
-  //     });
-  //   }
-  // }, [wines, sortType])
   function onSearch(input) {
     console.log(input);
     setSearchInput(input);
@@ -77,15 +55,6 @@ function App() {
   const wineAscending = [...wines].sort((a, b) => (a.name > b.name ? 1 : -1));
   const wineDescending = [...wines].sort((b, a) => (b.name > a.name ? 1 : -1));
 
-  const winePriceAscending = [...wines].sort((a, b) =>
-    b.price > a.price ? 1 : -1
-  );
-  const winePriceDescending = [...wines].sort((a, b) =>
-    a.price > b.price ? 1 : -1
-  );
-  const bestSelling = [...wines].sort((a, b) =>
-    a.units_sold > b.units_sold ? 1 : -1
-  );
   const defaultSort = [...wines].sort((a, b) => (a.id > b.id ? 1 : -1));
   function handleSortType(sort){
     if (sort === "ascending alphabetical"){
@@ -96,20 +65,6 @@ function App() {
     
   }
 
-  console.log(defaultSort);
-  
-    // function handleCartItems(cartitem) {
-  //   console.log("handle cart items function has run")
-  //   console.log(cartitem)
-
-  //   // const filteredCartItems = wines.filter((item) => item.id === wine.product.id)
-    
-  //   // console.log(filteredCartItems)
-  //   // console.log(wine)
-  //   // console.log(wines)
-
-  //   setCartItems([...cartItems, cartitem]);
-  // }
 
   return (
     <div className="App">

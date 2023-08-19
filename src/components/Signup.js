@@ -23,7 +23,7 @@ function SignUp({ onLogin, user, setSession}) {
         r.json().then((user) => 
         {
           onLogin(user)
-          fetch("/shopping_sessions", {
+          fetch("http://127.0.0.1:5555/shopping_sessions", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
