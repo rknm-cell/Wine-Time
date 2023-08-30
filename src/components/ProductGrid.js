@@ -50,6 +50,7 @@ function ProductGrid({ user, session, wines, searchInput, onSearch }) {
         <Sort setSortValue={setSortValue} />
       </div>
       <div className="product-grid">
+        
         {[...wines]
           .sort((a, b) => (eval(sortValue) ? 1 : -1))
           .map((wine) => {

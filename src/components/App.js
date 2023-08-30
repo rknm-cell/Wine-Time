@@ -9,6 +9,8 @@ import Cart from "./Cart";
 import Header from "./Header";
 import SignUp from "./Signup";
 import Checkout from "./Checkout";
+import ImageCarousel from "./ImageCarousel";
+import LandingPage from "./LandingPage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -72,7 +74,7 @@ function App() {
         <Header user={user} onLogout={handleLogout} />
         {/* <Search searchInput={searchInput} onSearch={onSearch}/> */}
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<LandingPage />}></Route>
           <Route
             path="/products"
             element={

@@ -283,7 +283,23 @@
   width: 35%;
   padding: 50px;
   margin-top: 55px;
-  background-color: #f3f3f2;
+ 
+  background-image: url('/src/pexels-photo-1277181.png');
+  /* You can adjust other background properties here */
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  /* Other CSS styles for your component */
+
+}
+.login-button {
+  
+  width: 100px;
+  height: 50px;
+  
+  font-size: large;
+  font-weight: bold;
+  
+
 }
 
 .basic-form-content {
@@ -316,6 +332,7 @@ input {
   border-radius: 10px;
   background-color: rgb(203, 192, 192);
 }
+
 
 /* tablet */
 @media all and (max-width: 991px) {
@@ -467,11 +484,22 @@ input {
   width: 25vw;
 }
 
+
 .navButtonTwo {
   background-color: #f3f3f2;
   text-align: left;
   padding: 2%;
   width: 25vw;
+}
+
+.alert-add-to-cart {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 a {
