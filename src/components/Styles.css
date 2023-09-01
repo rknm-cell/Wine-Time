@@ -358,7 +358,8 @@ input {
 
 .cart-card {
   display: relative;
-  width: 300px;
+  flex-direction: row;
+  width: 600px;
   height: 475px;
   margin: 1rem;
   padding: 1rem;
@@ -378,7 +379,7 @@ input {
 
 .cart-grid {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: left;
@@ -386,6 +387,7 @@ input {
 
 .cart-grid-holder {
   padding: 75px;
+  
 }
 .cart-delete-button {
   width: 150px;

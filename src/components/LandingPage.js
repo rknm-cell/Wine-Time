@@ -7,7 +7,7 @@ function Home() {
 const navigate = useNavigate();
   function handleClick() {
     console.log(wine)
-    navigate('/Home')
+    navigate('/products')
   }
 return (
   <div onClick={handleClick} id='main' className='main'>

@@ -15,13 +15,12 @@ import LandingPage from "./LandingPage";
 function App() {
   const [user, setUser] = useState(null);
 
-  const [session, setSession] = useState(null)
+  const [session, setSession] = useState(null);
   const [wines, setWines] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
   const [sortType, setSortType] = useState("default");
   const navigate = useNavigate();
-
 
   useEffect(() => {
     fetch("/check_session").then((response) => {
@@ -31,16 +30,16 @@ function App() {
     });
   }, []);
   function handleLogin(user) {
-    setUser(user)
-    navigate("/")
+    setUser(user);
+    navigate("/");
   }
-  
+
   useEffect(() => {
     fetch("/products") // localhost works here too!
       .then((r) => r.json())
       .then(setWines);
   }, []);
-  
+
   function handleLogout() {
     setUser(null);
   }
@@ -58,15 +57,20 @@ function App() {
   const wineDescending = [...wines].sort((b, a) => (b.name > a.name ? 1 : -1));
 
   const defaultSort = [...wines].sort((a, b) => (a.id > b.id ? 1 : -1));
-  function handleSortType(sort){
-    if (sort === "ascending alphabetical"){
-      setSortType(wineAscending)
-    } else if (sort === "descending alphabetical"){
-      setSortType(wineDescending)
+  function handleSortType(sort) {
+    if (sort === "ascending alphabetical") {
+      setSortType(wineAscending);
+    } else if (sort === "descending alphabetical") {
+      setSortType(wineDescending);
     }
-    
   }
 
+  // const images = [
+  //   "/src/pash-rash.jpg",
+  //   "/src/its-your-birthday.jpg",
+  //   "/src/naturalwine_hero.webp",
+  //   "/src/alba.jpg",
+  // ];
 
   return (
     <div className="App">
@@ -75,6 +79,7 @@ function App() {
         {/* <Search searchInput={searchInput} onSearch={onSearch}/> */}
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
+          {/* <Route path="/home" element={<Home images={images} />}></Route> */}
           <Route
             path="/products"
             element={
@@ -87,24 +92,35 @@ function App() {
               />
             }
           ></Route>
-          {user ? null : 
-          <Route
-            path="/login"
-            element={<Login onLogin={handleLogin} user={user} />}
-          ></Route>}
-          {user ? null : <Route
-            path="/create-account"
-            element={<SignUp user={user} onLogin={handleLogin} setSession={setSession} />}
-          ></Route>}
+          {user ? null : (
+            <Route
+              path="/login"
+              element={<Login onLogin={handleLogin} user={user} />}
+            ></Route>
+          )}
+          {user ? null : (
+            <Route
+              path="/create-account"
+              element={
+                <SignUp
+                  user={user}
+                  onLogin={handleLogin}
+                  setSession={setSession}
+                />
+              }
+            ></Route>
+          )}
           <Route
             path="/products/:id"
             element={<ProductDetails session={session} />}
           ></Route>
-          <Route path="/cart" element={<Cart user={user} session={session} />}></Route>
-          <Route path='/checkout' element={<Checkout />}></Route>
+          <Route
+            path="/cart"
+            element={<Cart user={user} session={session} />}
+          ></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
         </Routes>
       </div>
-
     </div>
   );
 }
