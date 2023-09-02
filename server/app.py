@@ -4,7 +4,7 @@
 from flask import Flask, request, make_response, jsonify, session
 from flask_cors import CORS
 from flask_migrate import Migrate
-from flask_restful import Api, Resource
+from flask_restful import Api, Resource, reqparse
 
 from models import db, User, Product, Cart_Item, Shopping_Session
 
@@ -19,6 +19,7 @@ migrate = Migrate(app, db)
 
 db.init_app(app)
 api = Api(app)
+parser = reqparse.RequestParser()
 # Views go here!
 
 class Products(Resource):
@@ -63,7 +64,20 @@ class Cart_Items(Resource):
             201
         )
         return response
-        
+    
+    def patch(self, product_id):
+        if product_id not in self:
+            return {'message': 'Product not found'}, 404
+
+        args = parser.parse_args()
+        new_product_num = args['product_num']
+
+        # Update the product number
+        Cart_Item[product_id]['product_num'] = new_product_num
+
+        return {'message': 'Product updated', 'product': Cart_Item[product_id]}
+
+    
 api.add_resource(Cart_Items, '/cart_items')
 
 class Cart_ItemsByID(Resource):

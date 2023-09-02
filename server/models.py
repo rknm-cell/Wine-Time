@@ -63,6 +63,7 @@ class Cart_Item(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'))
+    product_num = db.Column(db.Integer)
     shopping_session_id = db.Column(db.Integer, db.ForeignKey('shopping_sessions.id'))
 
     serialize_rules = ('-product.cart_items', '-shopping_session.cart_items')
