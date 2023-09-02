@@ -51,7 +51,8 @@ class Cart_Items(Resource):
         
         new_cart_item = Cart_Item(
             product_id = request.json['product_id'],
-            shopping_session_id = request.json['shopping_session_id']
+            shopping_session_id = request.json['shopping_session_id'],
+            product_num = request.json['product_num']
         )
 
         db.session.add(new_cart_item)
