@@ -67,7 +67,7 @@ class Cart_Items(Resource):
         return response
     
     def patch(self, product_id):
-        if product_id not in self:
+        if product_id not in Cart_Item:
             return {'message': 'Product not found'}, 404
 
         args = parser.parse_args()
