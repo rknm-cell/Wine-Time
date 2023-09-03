@@ -2,7 +2,7 @@
 
 # Standard library imports
 from flask import Flask, request, make_response, jsonify, session
-from flask_cors import CORS
+# from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_restful import Api, Resource, reqparse
 
@@ -14,7 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
 
-CORS(app)
+# CORS(app)
 migrate = Migrate(app, db)
 
 db.init_app(app)
