@@ -222,53 +222,6 @@ class Logout(Resource):
 
 api.add_resource(Logout, '/logout')
 
-# class Users(Resource):
-#     def get(self):
-#         pass
-    
-# api.add_resource(Users, '/users')
-
-
-# class UsersById(Resource):
-#     def get(self):
-#         pass
-#     def post(self):
-#         pass
-#     def patch(self):
-#         pass
-#     def delete(self):
-#         pass
-# api.add_resource(UsersById, '/users/<int:id>')
-
-
-# class User_Products(Resource):
-#     def get(self):
-#         pass
-    
-# api.add_resource(User_Products, '/userproducts')
-
-# class Transactions(Resource):
-#     def get(self):
-#         pass
-#     def post(self):
-#         pass
-#     def patch(self):
-#         pass
-#     def delete(self):
-#         pass
-# api.add_resource(Transactions, '/transactions')
-
-
-# class TransactionsById(Resource):
-#     def get(self):
-#         pass
-#     def post(self):
-#         pass
-#     def patch(self):
-#         pass
-#     def delete(self):
-#         pass
-# api.add_resource(TransactionsById, '/transactions/<int:id>')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
