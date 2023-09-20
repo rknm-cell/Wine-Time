@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState} from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./Styles.css";
-import Home from "./Home.js";
+
 import ProductGrid from "./ProductGrid";
 import Login from "./Login";
 import ProductDetails from "./ProductDetails";

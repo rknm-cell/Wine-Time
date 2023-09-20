@@ -38,6 +38,7 @@ function ProductDetails({session, handleCartItems}) {
           <p className="product-detail-description">{state.description}</p>
           <p className="product-detail-price">${state.price}</p>
           <button className="product-detail-button" onClick={handleAddToCartClick}>Add To Cart</button>
+          
         </div>
       </div>
     </div>

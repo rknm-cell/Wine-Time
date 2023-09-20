@@ -66,17 +66,17 @@ class Cart_Items(Resource):
         )
         return response
     
-    def patch(self, product_id):
-        if product_id not in Cart_Item:
-            return {'message': 'Product not found'}, 404
+    # def patch(self, product_id):
+    #     if product_id not in Cart_Item:
+    #         return {'message': 'Product not found'}, 404
 
-        args = parser.parse_args()
-        new_product_num = args['product_num']
+    #     args = parser.parse_args()
+    #     new_product_num = args['product_num']
 
-        # Update the product number
-        Cart_Item[product_id]['product_num'] = new_product_num
+    #     # Update the product number
+    #     Cart_Item[product_id]['product_num'] = new_product_num
 
-        return {'message': 'Product updated', 'product': Cart_Item[product_id]}
+    #     return {'message': 'Product updated', 'product': Cart_Item[product_id]}
 
     
 api.add_resource(Cart_Items, '/cart_items')

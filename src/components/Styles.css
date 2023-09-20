@@ -5,6 +5,7 @@
   margin: 1rem;
   padding: 1rem;
   border: 3px solid rgb(203, 192, 192);
+  
 }
 
 .cart-card-detail {
@@ -28,45 +29,22 @@
 
 .cart-grid-holder {
   padding: 75px;
+  
 }
-.cart-delete-button {
+.cart-delete-button{
   width: 150px;
   border-radius: 15px;
   padding: 2%;
-  background-color: #b8939f;
+  background-color: #b8939f
 }
-.cart-price {
+.cart-price{
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 10px
 }
-.checkout-button {
+.checkout-button{
   height: 30px;
   width: 100px;
   border-radius: 25px;
-}
-@media only screen and (max-width: 767px) {
-  /* for mobile phones */
-  .cart-card {
-    width: 400px;
-    height: 470px;
-    padding-bottom: 25px;
-  }
-  .cart-card-detail img {
-    width: 300px;
-    height: 350px;
-    /* border: solid hsl(0, 0%, 90%); */
-    object-fit: contain;
-  }
-  .cart-card-name {
-    padding-top: 2px;
-    padding-left: 2px;
-  }
-  .cart-card-price {
-    padding: 2px;
-  }
-  .cart-card-units {
-    padding: 2px;
-  }
 }
 .product-grid-header{
   flex-direction: row;
@@ -355,83 +333,6 @@ input {
   }
 }
 
-.cart-card {
-  display: relative;
-  flex-direction: row;
-  width: 600px;
-  height: 475px;
-  margin: 1rem;
-  padding: 1rem;
-  border: 3px solid rgb(203, 192, 192);
-}
-
-.cart-card-detail {
-  display: relative;
-}
-
-.cart-card-detail img {
-  width: 100%;
-  height: 350px;
-  /* border: solid hsl(0, 0%, 90%); */
-  object-fit: contain;
-}
-
-.cart-grid {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  text-align: left;
-}
-
-.cart-grid-holder {
-  padding: 75px;
-  
-}
-.cart-delete-button {
-  width: 150px;
-  border-radius: 15px;
-  padding: 2%;
-  background-color: #b8939f;
-}
-.cart-price {
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
-.checkout-button {
-  height: 30px;
-  width: 100px;
-  border-radius: 25px;
-}
-@media only screen and (max-width: 767px) {
-  /* for mobile phones */
-  .cart-card {
-    width: 400px;
-    height: 470px;
-    padding-bottom: 25px;
-  }
-  .cart-card-detail img {
-    width: 300px;
-    height: 350px;
-    /* border: solid hsl(0, 0%, 90%); */
-    object-fit: contain;
-  }
-  .cart-card-name {
-    padding-top: 2px;
-    padding-left: 2px;
-  }
-  .cart-card-price {
-    padding: 2px;
-  }
-  .cart-card-units {
-    padding: 2px;
-  }
-}
-.checkout {
-  padding-top: 50px;
-  text-align: center;
-  border-radius: 25px;
-}
 
 /* tablet */
 @media all and (max-width: 991px) {
