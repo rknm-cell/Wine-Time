@@ -287,12 +287,7 @@
   width: 35%;
   padding: 50px;
   margin-top: 55px;
- 
-  background-image: url('/src/pexels-photo-1277181.png');
-  /* You can adjust other background properties here */
-  background-size: cover; /* Adjust as needed */
-  background-repeat: no-repeat; /* Adjust as needed */
-  /* Other CSS styles for your component */
+ background-color: ;
 
 }
 .login-button {

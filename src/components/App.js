@@ -9,7 +9,6 @@ import Cart from "./Cart";
 import Header from "./Header";
 import SignUp from "./Signup";
 import Checkout from "./Checkout";
-import ImageCarousel from "./ImageCarousel";
 import LandingPage from "./LandingPage";
 
 function App() {
